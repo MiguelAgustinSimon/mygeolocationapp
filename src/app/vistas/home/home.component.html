@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <app-card-selector  (messageEvent)="receiveMessage($event)"></app-card-selector>
+        </div>
+        <div class="col-md-6">
+            <app-card-selector2 (messageEvent)="receiveMessage2($event)"></app-card-selector2>
+        </div>
+    </div>
+
+    <div class="row" *ngIf="mapa1">
+        <app-mapbox></app-mapbox>
+    </div>
+    <div class="row" *ngIf="mapa2">
+        <app-mapboxline></app-mapboxline>
+    </div>
+</div>
